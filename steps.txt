@@ -1,6 +1,8 @@
 Created react app
 Setup frontend files
-Download the mongodb comunity server then added the path to environment variables
-Download the mongosh then added the path to environment variables
+Download the mongodb community server then added the path to environment variables
+Download the mongo sh then added the path to environment variables
 Download the mongo command line tools then added the path to environment variables
 Installed the express nodemon mongoose
+Install express validator
+Install bcrypt and jsonwebtoken
