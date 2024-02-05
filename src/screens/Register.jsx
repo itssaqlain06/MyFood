@@ -21,7 +21,7 @@ const Register = () => {
                 alert("You have provided invalid credentials");
             }
             if (json.success === true) {
-                navigate('/');
+                navigate('/login');
             }
 
         } catch (error) {

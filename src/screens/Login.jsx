@@ -20,9 +20,8 @@ const Login = () => {
                 alert("You have provided invalid credentials");
                 console.log("You have provided invalid credentials");
             }
-            if (json.success === true) {
+            if (json.success == true) {
                 const token = localStorage.setItem('authToken', json.authToken);
-                console.warn(token.getItem('authToken'));
                 navigate('/');
             }
 
@@ -76,7 +75,7 @@ const Login = () => {
                                 <label className="form-label" htmlFor="loginPassword">Password</label>
                             </div>
 
-                            <button type="submit" className="btn btn-success btn-block mb-4">Register</button>
+                            <button type="submit" className="btn btn-success btn-block mb-4">Login</button>
 
                             <div className="text-center">
                                 <p>Not a member? <Link to="/register">Register</Link></p>

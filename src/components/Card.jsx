@@ -1,12 +1,19 @@
 import React from 'react'
+import { useCart, useDispatch } from './ContextReducer';
 
-export default function Card() {
+export default function Card(props) {
+
+    let options = props.options;
+    let priceOptions = Object.keys(options);
+    const handleAddToCart = () => {
+
+    }
     return (
         <div>
-            <div className="card m-5" style={{ width: "18rem", maxHeight: '360px' }}>
-                <img src="https://source.unsplash.com/random/1000x1000?food" className="card-img-top" alt="..." />
+            <div className="card my-3" style={{ width: "18rem", maxHeight: '360px' }}>
+                <img style={{ height: "150px", objectFit: "fill" }} src={props.foodItem.img} className="card-img-top" alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
+                    <h5 className="card-title">{props.foodItem.name}</h5>
                     <p className="card-text">Some quick example text.</p>
                     <div className="container w-100">
                         <select className="mt-2 h-100 bg-success rounded text-white">
@@ -17,11 +24,14 @@ export default function Card() {
                             })}
                         </select>
                         <select className="mt-2 h-100 bg-success rounded mx-2 text-white">
-                            <option value="half">Half</option>
-                            <option value="full">Full</option>
+                            {priceOptions && priceOptions !== '' ? priceOptions.map((price) => {
+                                return <option value={price} key={price}>{price}</option>
+                            }) : ''}
                         </select>
                         <div className="d-inline h-100 fs-5 fw-bold">Total Price</div>
                     </div>
+                    <hr />
+                    <button className='btn bg-success text-white mx-2' onClick={handleAddToCart}>Add To Cart</button>
                 </div>
             </div>
         </div>
