@@ -6,3 +6,4 @@ Download the mongo command line tools then added the path to environment variabl
 Installed the express nodemon mongoose
 Install express validator
 Install bcrypt and jsonwebtoken
+Install mui icon @emotion/react @emotion/styled
